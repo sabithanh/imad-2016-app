@@ -41,7 +41,7 @@ var articleThree = {
                 </p>
                 <p>
                     TThis is the content of the article three. This is the content of the article three.This is the content of the article three.This is the content of the article three.This is the content of the article three. 
-                </p>`              `
+                </p>`
 };
 function createTemplate(data){
     var title= data.title;
@@ -87,7 +87,7 @@ app.get('/article_two', function(req, res){
     res.send(createTemplate(articleTwo));
     });
 app.get('/article_three', function(req, res){
-    res.send(createTemplate(articleThree);
+    res.send(createTemplate(articleThree));
     });    
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
