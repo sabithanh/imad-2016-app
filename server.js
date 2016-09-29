@@ -19,11 +19,35 @@ var articleOne = {
                     This is the content of the article one. This is the content of the article one. This is the content of the article one. This is the content of the article one. This is the content of the article one. This is the content of the article one. This is the content of the article one. 
                 </p>`
 };
+var articleTwo = {
+    title: "Article Two | Sabitha",
+    heading: "Article Two",
+    date: 10/09/2016,
+    content: `<p>
+                    This is the content of the article two. This is the content of the article two.This is the content of the article two.This is the content of the article two.This is the content of the article two. 
+                </p>
+                <p>
+                    This is the content of the article two. This is the content of the article two.This is the content of the article two.This is the content of the article two.This is the content of the article two. </p>
+                <p>
+                    This is the content of the article two. This is the content of the article two.This is the content of the article two.This is the content of the article two.This is the content of the article two. article one. This is the content of the article one. 
+                </p>`
+};
+var articleThree = {
+    title: "Article Three | Sabitha",
+    heading: "Article Three",
+    date: 15/09/2016,
+    content:    `<p>
+                    This is the content of the article three. This is the content of the article three.This is the content of the article three.This is the content of the article three.This is the content of the article three. 
+                </p>
+                <p>
+                    TThis is the content of the article three. This is the content of the article three.This is the content of the article three.This is the content of the article three.This is the content of the article three. 
+                </p>`              `
+};
 function createTemplate(data){
     var title= data.title;
     var heading = data.heading;
     var date = data.date;
-    varr content = data.content
+    var content = data.content;
     
     var htmlTemplate=
         `<html>
@@ -32,16 +56,7 @@ function createTemplate(data){
                 ${title}
             </title>
             <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
-            <style>
-                .container{
-                        margin: 0 auto;
-                        font-family: sans-serif;
-                        color: #2a4c2a;
-                        padding-top: 70px;
-                        padding-left: 20;
-                        padding-right: 20px;
-                }
-            </style>
+            
         </head>
         <body>
             <div class="container">
@@ -58,8 +73,8 @@ function createTemplate(data){
                 </div>
             </div>
         </body>
-    </html>`
-;
+    </html>`;
+
     return htmlTemplate;
 }
 app.get('/', function (req, res) {
@@ -69,10 +84,10 @@ app.get('/article_one', function(req, res){
     res.send(createTemplate(articleOne));
     });
 app.get('/article_two', function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article_two.html'));
+    res.send(createTemplate(articleTwo));
     });
 app.get('/article_three', function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article_three.html'));
+    res.send(createTemplate(articleThree);
     });    
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -87,3 +102,5 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
+
