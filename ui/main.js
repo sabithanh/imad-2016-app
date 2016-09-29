@@ -8,7 +8,7 @@ element.innerHTML = 'new value';
 var element = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight(){
-    marginLeft= marginLeft + 5; 
+    marginLeft= marginLeft + 10; 
     img.style.MarginLeft = marginLeft + 'px';
 }
 madi.onclick = function(){
