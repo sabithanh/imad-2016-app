@@ -22,7 +22,7 @@ var articleOne = {
 var articleTwo = {
     title: "Article Two | Sabitha",
     heading: "Article Two",
-    date: 10/09/2016,
+    date: '10/09/2016',
     content: `<p>
                     This is the content of the article two. This is the content of the article two.This is the content of the article two.This is the content of the article two.This is the content of the article two. 
                 </p>
@@ -35,7 +35,7 @@ var articleTwo = {
 var articleThree = {
     title: "Article Three | Sabitha",
     heading: "Article Three",
-    date: 15/09/2016,
+    date: '15/09/2016',
     content:    `<p>
                     This is the content of the article three. This is the content of the article three.This is the content of the article three.This is the content of the article three.This is the content of the article three. 
                 </p>
